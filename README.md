@@ -1,4 +1,6 @@
-# app
+# folio-site
+
+Source for danpeavey.com
 
 ## Project setup
 ```
