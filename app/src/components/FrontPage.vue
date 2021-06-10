@@ -1,6 +1,6 @@
 <template>
   <div class="grid-2" @mousemove="onMove">
-    <div class="parallax" />
+    <div class="parallax"/>
     <div class="bottom-vignette"/>
     <div class="section-1">
       <i class="fas fa-code fa-5x white"></i>
@@ -34,10 +34,10 @@ export default class FrontPage extends Vue {
   @Prop() private gitHub!: string;
   @Prop() private email!: string;
 
-  onMove(evt: Event): void {
-    const parallaxElement = this.$el.querySelector('.parallax');
-
+  onMove(evt: MouseEvent): void {
     const movementStrength = 25;
+    let parallaxElement = this.$el.querySelector('.parallax') as HTMLElement;
+
     let width = movementStrength / window.innerWidth;
     let height = movementStrength / window.innerHeight;
     let pageX = evt.pageX - window.innerWidth / 2;
@@ -75,12 +75,11 @@ export default class FrontPage extends Vue {
 
   opacity: 0.4;
   background-image: url('../assets/background-scroller.png');
-  /*background-attachment: fixed;*/
   --x: 0;
   --y: -40vh;
   background-position: var(--x) var(--y);
   background-repeat: no-repeat;
-  background-size: calc( 100% + 50px );
+  background-size: calc(100% + 50px);
 
   filter: blur(6px);
   -webkit-filter: blur(6px);
