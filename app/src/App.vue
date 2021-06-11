@@ -1,12 +1,6 @@
 <template>
   <div id="app">
-    <FrontPage name="Dan Peavey"
-               city="Bellevue"
-               statePostalCode="WA"
-               twitter="https://twitter.com/danpeavey"
-               linked-in="https://www.linkedin.com/in/danpeaveydev/"
-               git-hub="https://github.com/sunmachine"
-               email="danpeavey@gmail.com"/>
+    <FrontPage/>
   </div>
 </template>
 
@@ -16,7 +10,7 @@ import FrontPage from "@/components/FrontPage.vue";
 
 @Component({
   components: {
-    FrontPage,
+    FrontPage
   },
 })
 
