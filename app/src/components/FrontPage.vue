@@ -29,6 +29,8 @@ import Content from "@/components/Content.vue";
   components: {Content, LogoHeader, Background}
 })
 export default class FrontPage extends Vue {
+  title: string = 'dan peavey'
+
   @PropSync("#")
   private contactContent = {
     header: "Contact",
@@ -45,6 +47,10 @@ export default class FrontPage extends Vue {
       "Not a fan of it anymore. Updates here \"coming soon™\"."
     ]
   };
+
+  mounted() {
+    this.$nextTick(() => document.title = this.title);
+  }
 }
 </script>
 
