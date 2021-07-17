@@ -1,7 +1,7 @@
 <template>
   <div class="grid-2">
     <LogoHeader class="section-1"
-                name="Dan Peavey"
+                my-name="Dan Peavey"
                 city="Bellevue"
                 state-postal-code="WA"
                 twitter-url="https://twitter.com/danpeavey"
@@ -22,7 +22,7 @@
 <script lang="ts">
 import Vue from 'vue'
 
-import { SectionContent as ISectionContent } from "src/ComponentInterfaces.ts";
+import { SectionContent as ISectionContent } from "src/ComponentInterfaces";
 import Background from "~/components/FrontPage/Background.vue";
 import LogoHeader from "~/components/FrontPage/LogoHeader.vue";
 import Content from "~/components/FrontPage/Content.vue";

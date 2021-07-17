@@ -1,7 +1,7 @@
 ﻿<template>
   <div>
     <i class="fas fa-code fa-5x white"></i>
-    <h2>{{ name }}</h2>
+    <h2>{{ myName }}</h2>
     <p>{{ city }}, {{ statePostalCode }}</p>
     <a :href="twitterUrl"><i class="fab fa-twitter"></i></a>
     <a :href="linkedInUrl"><i class="fab fa-linkedin"></i></a>
@@ -15,6 +15,10 @@ import Vue from 'vue'
 export default Vue.extend({
   name: "Background",
   props: {
+    myName: {
+      type: String,
+      default: "DEFAULT_NAME"
+    },
     city: {
       type: String,
       default: "DEFAULT_CITY"
