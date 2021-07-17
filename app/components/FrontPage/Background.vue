@@ -6,25 +6,27 @@
 </template>
 
 <script lang="ts">
-import { Options, Vue } from 'vue-class-component';
+import Vue from 'vue'
 
-@Options
-export default class Background extends Vue {
-  onMove(evt: MouseEvent): void {
-    const amplitude: number = 25;
-    let element = this.$el.querySelector('.parallax') as HTMLElement;
+export default Vue.extend({
+  name: "Background",
+  methods: {
+    onMove(evt: MouseEvent): void {
+      const amplitude: number = 25;
+      const element = this.$el.querySelector('.parallax') as HTMLElement;
 
-    let width = amplitude / window.innerWidth;
-    let height = amplitude / window.innerHeight;
-    let pageX = evt.pageX - window.innerWidth / 2;
-    let pageY = evt.pageY - window.innerHeight / 2;
-    let newX = width * pageX * -1 - 25;
-    let newY = height * pageY * -1 - 50;
+      const width = amplitude / window.innerWidth;
+      const height = amplitude / window.innerHeight;
+      const pageX = evt.pageX - window.innerWidth / 2;
+      const pageY = evt.pageY - window.innerHeight / 2;
+      const newX = width * (pageX * -1) - 25;
+      const newY = height * (pageY * -1) - 50;
 
-    element.style.backgroundPositionX = newX + "px";
-    element.style.backgroundPositionY = newY + -200 + "px";
+      element.style.backgroundPositionX = newX + "px";
+      element.style.backgroundPositionY = newY + -200 + "px";
+    }
   }
-}
+})
 </script>
 
 <style scoped>
@@ -51,7 +53,7 @@ export default class Background extends Vue {
   /* <img src="" height="1280" width="687" /> */
 
   opacity: 0.4;
-  background-image: url('../assets/background-scroller.png');
+  background-image: url('../../assets/background-scroller.png');
   --x: 0;
   --y: -40vh;
   background-position: var(--x) var(--y);
