@@ -20,27 +20,37 @@
 </template>
 
 <script lang="ts">
-import {Component, PropSync, Vue} from "vue-property-decorator";
+import {Options, Vue} from 'vue-class-component';
 import Background from "@/components/Background.vue";
 import LogoHeader from "@/components/LogoHeader.vue";
 import Content from "@/components/Content.vue";
 
-@Component({
-  components: {Content, LogoHeader, Background}
+@Options({
+  components: {
+    Content,
+    LogoHeader,
+    Background
+  }
 })
 export default class FrontPage extends Vue {
+  data() {
+    return {
+      title: this.title,
+      contactContent: this.contactContent,
+      underConstructionContent: this.underConstructionContent
+    }
+  }
+
   title: string = 'dan peavey'
 
-  @PropSync("#")
-  private contactContent = {
+  contactContent = {
     header: "Contact",
     emails: [
       "danpeavey@gmail.com"
     ]
   };
 
-  @PropSync("#")
-  private underConstructionContent = {
+  underConstructionContent = {
     header: "Under Construction",
     paragraphs: [
       "Should be worth noting that I tore down my Squarespace.",

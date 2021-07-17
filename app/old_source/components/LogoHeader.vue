@@ -10,16 +10,16 @@
 </template>
 
 <script lang="ts">
-import {Component, Prop, Vue} from 'vue-property-decorator';
+import { Options, Vue } from 'vue-class-component';
 
-@Component
+@Options
 export default class LogoHeader extends Vue {
-  @Prop() private name!: string;
-  @Prop() private city!: string;
-  @Prop() private statePostalCode!: string;
-  @Prop() private twitter!: string;
-  @Prop() private linkedIn!: string;
-  @Prop() private gitHub!: string;
+  name!: string;
+  city!: string;
+  statePostalCode!: string;
+  twitter!: string;
+  linkedIn!: string;
+  gitHub!: string;
 }
 </script>
 

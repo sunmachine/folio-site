@@ -8,12 +8,14 @@
 </template>
 
 <script lang="ts">
-import {Component, Prop, Vue} from "vue-property-decorator";
+import { Options, Vue } from 'vue-class-component';
 
-@Component
+@Options
 export default class Content extends Vue {
-  @Prop() header!: string;
-  @Prop() paragraphs!: string[];
+  props: {
+    header,
+    paragraphs
+  }
 }
 </script>
 

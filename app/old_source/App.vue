@@ -5,17 +5,16 @@
 </template>
 
 <script lang="ts">
-import {Component, Vue} from 'vue-property-decorator';
+import { Options, Vue } from 'vue-class-component';
 import FrontPage from "@/components/FrontPage.vue";
 
-@Component({
+
+@Options({
   components: {
-    FrontPage
+    FrontPage,
   },
 })
-
-export default class App extends Vue {
-}
+export default class App extends Vue {}
 </script>
 
 <style>
