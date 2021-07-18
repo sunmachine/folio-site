@@ -1,11 +1,11 @@
 ﻿<template>
   <div>
-    <i class="fas fa-code fa-5x white"></i>
+    <i class="fas fa-code fa-5x white" />
     <h2>{{ myName }}</h2>
     <p>{{ city }}, {{ statePostalCode }}</p>
-    <a :href="twitterUrl"><i class="fab fa-twitter"></i></a>
-    <a :href="linkedInUrl"><i class="fab fa-linkedin"></i></a>
-    <a :href="gitHubUrl"><i class="fab fa-github"></i></a>
+    <a :href="twitterUrl"><i class="fab fa-twitter" /></a>
+    <a :href="linkedInUrl"><i class="fab fa-linkedin" /></a>
+    <a :href="gitHubUrl"><i class="fab fa-github" /></a>
   </div>
 </template>
 

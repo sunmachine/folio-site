@@ -1,13 +1,13 @@
 <template>
-  <div class="grid-2">
-    <LogoHeader class="section-1"
+  <div>
+    <LogoHeader class=""
                 my-name="Dan Peavey"
                 city="Bellevue"
                 state-postal-code="WA"
                 twitter-url="https://twitter.com/danpeavey"
                 linked-in="https://www.linkedin.com/in/danpeaveydev/"
                 git-hub="https://github.com/sunmachine"/>
-    <div class="grid-1 section-2">
+    <div class="">
       <Content id="news"
                :header="newsContent.header"
                :content="newsContent.content"/>
