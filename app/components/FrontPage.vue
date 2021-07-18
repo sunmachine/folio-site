@@ -1,13 +1,13 @@
 <template>
   <div>
-    <LogoHeader class=""
-                my-name="Dan Peavey"
+    <Background/>
+    <LogoHeader my-name="Dan Peavey"
                 city="Bellevue"
                 state-postal-code="WA"
                 twitter-url="https://twitter.com/danpeavey"
                 linked-in="https://www.linkedin.com/in/danpeaveydev/"
                 git-hub="https://github.com/sunmachine"/>
-    <div class="">
+    <div>
       <Content id="news"
                :header="newsContent.header"
                :content="newsContent.content"/>
@@ -15,7 +15,6 @@
                :header="contactContent.header"
                :content="contactContent.content"/>
     </div>
-    <Background/>
   </div>
 </template>
 
