@@ -1,11 +1,13 @@
 ﻿<template>
-  <div>
-    <i class="fas fa-code fa-5x white" />
-    <h2>{{ myName }}</h2>
+  <div class="text-blue-50 text-center">
+    <i class="p-3 fas fa-code fa-5x" />
+    <h2 class="text-3xl mb-10">{{ myName }}</h2>
     <p>{{ city }}, {{ statePostalCode }}</p>
-    <a :href="twitterUrl"><i class="fab fa-twitter" /></a>
-    <a :href="linkedInUrl"><i class="fab fa-linkedin" /></a>
-    <a :href="gitHubUrl"><i class="fab fa-github" /></a>
+    <div class="text-2xl">
+      <a :href="twitterUrl"><i class="p-2 hover:text-white fab fa-twitter" /></a>
+      <a :href="linkedInUrl"><i class="p-2 hover:text-white fab fa-linkedin" /></a>
+      <a :href="gitHubUrl"><i class="p-2 hover:text-white fab fa-github" /></a>
+    </div>
   </div>
 </template>
 
@@ -44,4 +46,5 @@ export default Vue.extend({
 </script>
 
 <style scoped>
+@import url(https://use.fontawesome.com/releases/v5.4.1/css/all.css);
 </style>
