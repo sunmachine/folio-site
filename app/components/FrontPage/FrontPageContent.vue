@@ -1,7 +1,9 @@
 ﻿<template>
-  <div>
-    <h2>{{ header }}</h2>
-    <p v-for="lineItem in content" :key='lineItem'>
+  <div class="text-blue-50 m-10">
+    <h2 class="text-3xl">
+      {{ header }}
+    </h2>
+    <p v-for="lineItem in content" :key='lineItem' class="text-base m-2">
       {{ lineItem }}
     </p>
   </div>
@@ -24,6 +26,3 @@ export default Vue.extend({
   },
 });
 </script>
-
-<style scoped>
-</style>

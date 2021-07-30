@@ -1,15 +1,16 @@
 <template>
   <div>
     <FrontPageBackground/>
-    <div class="grid grid-cols-1 md:grid-cols-2">
-      <FrontPageHeader class="pt-20"
-                       my-name="Dan Peavey"
-                       city="Bellevue"
-                       state-postal-code="WA"
-                       twitter-url="https://twitter.com/danpeavey"
-                       linked-in-url="https://www.linkedin.com/in/danpeaveydev/"
-                       git-hub-url="https://github.com/sunmachine"/>
-      <div>
+    <div class="grid grid-cols-1 md:grid-cols-2 md:pt-20">
+      <div class="pt-20">
+        <FrontPageHeader my-name="Dan Peavey"
+                         city="Bellevue"
+                         state-postal-code="WA"
+                         twitter-url="https://twitter.com/danpeavey"
+                         linked-in-url="https://www.linkedin.com/in/danpeaveydev/"
+                         git-hub-url="https://github.com/sunmachine"/>
+      </div>
+      <div class="md:w-4/5 md:pt-20 pt-8 pl-6">
         <FrontPageContent id="news"
                           :header="newsContent.header"
                           :content="newsContent.content"/>
