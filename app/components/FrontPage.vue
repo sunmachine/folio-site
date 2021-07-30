@@ -1,7 +1,7 @@
 <template>
   <div>
-    <Background/>
-    <LogoHeader class="pt-80 border-2"
+    <FrontPageBackground />
+    <FrontPageHeader class="pt-80 border-2"
                 my-name="Dan Peavey"
                 city="Bellevue"
                 state-postal-code="WA"
@@ -9,12 +9,12 @@
                 linked-in-url="https://www.linkedin.com/in/danpeaveydev/"
                 git-hub-url="https://github.com/sunmachine"/>
     <div class="grid grid-rows-2 border-2">
-      <Content id="news"
-               :header="newsContent.header"
-               :content="newsContent.content"/>
-      <Content id="contact"
-               :header="contactContent.header"
-               :content="contactContent.content"/>
+      <FrontPageContent id="news"
+                        :header="newsContent.header"
+                        :content="newsContent.content"/>
+      <FrontPageContent id="contact"
+                        :header="contactContent.header"
+                        :content="contactContent.content"/>
     </div>
   </div>
 </template>
@@ -23,16 +23,16 @@
 import Vue from 'vue'
 
 import { SectionContent as ISectionContent } from "src/ComponentInterfaces";
-import Background from "~/components/FrontPage/Background.vue";
-import LogoHeader from "~/components/FrontPage/LogoHeader.vue";
-import Content from "~/components/FrontPage/Content.vue";
+import FrontPageBackground from "~/components/FrontPage/FrontPageBackground.vue";
+import FrontPageHeader from "~/components/FrontPage/FrontPageHeader.vue";
+import FrontPageContent from "~/components/FrontPage/FrontPageContent.vue";
 
 export default Vue.extend({
   name: 'FrontPage',
   components: {
-    Content,
-    LogoHeader,
-    Background
+    FrontPageContent,
+    FrontPageHeader,
+    FrontPageBackground
   },
   data() {
     return {

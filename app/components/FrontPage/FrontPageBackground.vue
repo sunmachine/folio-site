@@ -11,7 +11,7 @@
 import Vue from "vue"
 
 export default Vue.extend({
-  name: "Background",
+  name: "FrontPageBackground",
   methods: {
     onMove(evt: MouseEvent): void {
       const amplitude: number = 25;

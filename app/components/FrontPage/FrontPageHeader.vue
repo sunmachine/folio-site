@@ -15,7 +15,7 @@
 import Vue from 'vue'
 
 export default Vue.extend({
-  name: "Background",
+  name: "FrontPageHeader",
   props: {
     myName: {
       type: String,

@@ -11,7 +11,7 @@
 import Vue from "vue";
 
 export default Vue.extend({
-  name: "Content",
+  name: "FrontPageContent",
   props: {
     header: {
       type: String,
