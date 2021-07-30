@@ -1,20 +1,22 @@
 <template>
   <div>
-    <FrontPageBackground />
-    <FrontPageHeader class="pt-80 border-2"
-                my-name="Dan Peavey"
-                city="Bellevue"
-                state-postal-code="WA"
-                twitter-url="https://twitter.com/danpeavey"
-                linked-in-url="https://www.linkedin.com/in/danpeaveydev/"
-                git-hub-url="https://github.com/sunmachine"/>
-    <div class="grid grid-rows-2 border-2">
-      <FrontPageContent id="news"
-                        :header="newsContent.header"
-                        :content="newsContent.content"/>
-      <FrontPageContent id="contact"
-                        :header="contactContent.header"
-                        :content="contactContent.content"/>
+    <FrontPageBackground/>
+    <div class="grid grid-cols-1 md:grid-cols-2">
+      <FrontPageHeader class="pt-20"
+                       my-name="Dan Peavey"
+                       city="Bellevue"
+                       state-postal-code="WA"
+                       twitter-url="https://twitter.com/danpeavey"
+                       linked-in-url="https://www.linkedin.com/in/danpeaveydev/"
+                       git-hub-url="https://github.com/sunmachine"/>
+      <div>
+        <FrontPageContent id="news"
+                          :header="newsContent.header"
+                          :content="newsContent.content"/>
+        <FrontPageContent id="contact"
+                          :header="contactContent.header"
+                          :content="contactContent.content"/>
+      </div>
     </div>
   </div>
 </template>
@@ -22,7 +24,7 @@
 <script lang="ts">
 import Vue from 'vue'
 
-import { SectionContent as ISectionContent } from "src/ComponentInterfaces";
+import {SectionContent as ISectionContent} from "src/ComponentInterfaces";
 import FrontPageBackground from "~/components/FrontPage/FrontPageBackground.vue";
 import FrontPageHeader from "~/components/FrontPage/FrontPageHeader.vue";
 import FrontPageContent from "~/components/FrontPage/FrontPageContent.vue";
@@ -60,6 +62,3 @@ export default Vue.extend({
   },
 })
 </script>
-
-<style scoped>
-</style>
