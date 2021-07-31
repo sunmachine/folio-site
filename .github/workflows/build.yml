@@ -35,11 +35,13 @@ jobs:
       - name: Generate static build
         run: npm run generate
       - name: Deploy build via scp
-        uses: nogsantos/ssh-scp-deploy@v1.3.0
+        uses: appleboy/scp-action@v0.1.1
         with:
-          src: ./app/dist/*
+          username: ${{ secrets.DREAMHOST_DANPEAVEYCOM_USERNAME }}
+          key: ${{ secrets.DREAMHOST_DANPEAVEYCOM_KEY }}
           host: ${{ secrets.DREAMHOST_DANPEAVEYCOM_HOST }}
-          remote: /home/${{ secrets.DREAMHOST_DANPEAVEYCOM_USERNAME }}/danpeaveycom/test/fixdir
           port: ${{ secrets.DREAMHOST_DANPEAVEYCOM_PORT }}
-          user: ${{ secrets.DREAMHOST_DANPEAVEYCOM_USERNAME }}
-          key: ${{ secrets.DREAMHOST_DANPEAVEYCOM_RSAPUB }}
+          source: ./app/dist/*
+          target: /home/${{ secrets.DREAMHOST_DANPEAVEYCOM_USERNAME }}/danpeavey.com/public
+          strip_components: 2
+          rm: true
