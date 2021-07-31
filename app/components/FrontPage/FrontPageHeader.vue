@@ -44,7 +44,3 @@ export default Vue.extend({
   }
 })
 </script>
-
-<style scoped>
-@import url(https://use.fontawesome.com/releases/v5.4.1/css/all.css);
-</style>
