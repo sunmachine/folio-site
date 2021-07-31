@@ -1,16 +1,6 @@
 // tailwind.config.js
 module.exports = {
   darkMode: "media",
-  purge: {
-    preserveHtmlElements: false,
-    content: [
-      "./components/**/*.{html,js,ts,vue}",
-      "./pages/**/*.{html,js,ts,vue}",
-    ],
-    options: {
-      keyframes: true,
-    },
-  },
   theme: {
     extend: {
       backgroundImage: () => ({
