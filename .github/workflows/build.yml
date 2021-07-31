@@ -12,7 +12,7 @@ on:
 
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
-  
+
 defaults:
   run:
     working-directory: ./app
@@ -24,10 +24,22 @@ jobs:
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
-      - uses: actions/checkout@v2
-      - uses: actions/setup-node@v2
+      - name: Checkout git project
+        uses: actions/checkout@v2
+      - name: Setup node dependencies
+        uses: actions/setup-node@v2
         with:
           node-version: '12'
-      - run: npm install
-      # Create static output from nuxt.
-      - run: npm run generate
+      - name: Install dependencies
+        run: npm install
+      - name: Generate static build
+        run: npm run generate
+      - name: Deploy build via scp
+        uses: nogsantos/ssh-scp-deploy@v1.3.0
+        with:
+          src: ./app/dist/*
+          host: ${{ secrets.DREAMHOST_DANPEAVEYCOM_HOST }}
+          remote: /home/${{ secrets.DREAMHOST_DANPEAVEYCOM_USERNAME }}/danpeaveycom/test/fixdir
+          port: ${{ secrets.DREAMHOST_DANPEAVEYCOM_PORT }}
+          user: ${{ secrets.DREAMHOST_DANPEAVEYCOM_USERNAME }}
+          key: ${{ secrets.DREAMHOST_DANPEAVEYCOM_RSAPUB }}
