@@ -29,4 +29,5 @@ jobs:
         with:
           node-version: '12'
       - run: npm install
-      - run: npm run build
+      # Create static output from nuxt.
+      - run: npm run generate
