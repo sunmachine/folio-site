@@ -4,7 +4,7 @@ module.exports = {
   theme: {
     extend: {
       backgroundImage: () => ({
-        "frontpage-image": "url('~/assets/background-scroller.png')"
+        "frontpage-image": "url('~/assets/background-scroller.jpg')"
       }),
       backgroundPosition: {
         "parallax": "0% 10%"
