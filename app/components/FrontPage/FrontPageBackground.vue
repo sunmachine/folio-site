@@ -1,6 +1,5 @@
 ﻿<template>
   <div>
-    <div class="w-screen h-screen fixed bg-transparent z-auto" @mousemove="onMove"/>
     <!-- Gradient -->
     <div class="w-screen h-screen bg-top fixed -z-10 bg-gradient-to-t from-gray-600 to-gray-100 mix-blend-multiply border-8 border-gray-900"/>
     <!-- BG Image -->
@@ -15,6 +14,9 @@ import Vue from "vue"
 
 export default Vue.extend({
   name: "FrontPageBackground",
+  mounted() {
+    window.addEventListener( "mousemove", this.onMove );
+  },
   methods: {
     onMove(evt: MouseEvent): void {
       const amplitude: number = 25;
