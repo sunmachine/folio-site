@@ -6,6 +6,9 @@ module.exports = {
       backgroundImage: () => ({
         "frontpage-image": "url('~/assets/background-scroller.png')"
       }),
+      colors: {
+        "s2grey": "#acb1ba"
+      },
       fontFamily: {
         sans: ["Roboto", "Helvetica", "Arial", "sans-serif"]
       },

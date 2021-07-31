@@ -1,9 +1,9 @@
 ﻿<template>
-  <div class="text-blue-100 text-center">
+  <div class="text-center">
     <i class="text-white p-3 fas fa-code fa-5x" />
     <h2 class="text-white text-3xl mb-10">{{ myName }}</h2>
-    <p>{{ city }}, {{ statePostalCode }}</p>
-    <div class="text-2xl">
+    <p class="text-base m-0 text-s2grey">{{ city }}, {{ statePostalCode }}</p>
+    <div class="text-2xl text-s2grey">
       <a :href="twitterUrl"><i class="p-2 hover:text-white fab fa-twitter" /></a>
       <a :href="linkedInUrl"><i class="p-2 hover:text-white fab fa-linkedin" /></a>
       <a :href="gitHubUrl"><i class="p-2 hover:text-white fab fa-github" /></a>

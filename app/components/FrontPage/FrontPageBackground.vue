@@ -1,9 +1,10 @@
 ﻿<template>
-  <div @mousemove="onMove">
+  <div>
+    <div class="w-screen h-screen fixed bg-transparent z-auto" @mousemove="onMove" />
     <!-- Gradient -->
     <div class="w-screen h-screen bg-top fixed -z-10 bg-gradient-to-t from-gray-800 to-transparent border-8 border-gray-900" />
     <!-- BG Image -->
-    <div class="scoped-parallax w-110 h-110 bg-cover bg-top bg-frontpage-image fixed -z-20 filter blur-sm" />
+    <div ref="scoped-parallax" class="w-110 h-110 bg-cover bg-top bg-frontpage-image fixed -z-20 filter blur-sm" />
   </div>
 </template>
 
@@ -15,7 +16,7 @@ export default Vue.extend({
   methods: {
     onMove(evt: MouseEvent): void {
       const amplitude: number = 25;
-      const element = this.$el.querySelector('.scoped-parallax') as HTMLElement;
+      const element = this.$refs["scoped-parallax"] as HTMLElement;
 
       const width = amplitude / window.innerWidth;
       const height = amplitude / window.innerHeight;

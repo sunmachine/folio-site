@@ -1,9 +1,9 @@
 ﻿<template>
-  <div class="text-blue-50 m-10">
-    <h2 class="text-3xl">
+  <div class="m-10">
+    <h2 class="text-3xl text-white">
       {{ header }}
     </h2>
-    <p v-for="lineItem in content" :key='lineItem' class="text-base m-2">
+    <p v-for="lineItem in content" :key='lineItem' class="text-base text-s2grey m-2">
       {{ lineItem }}
     </p>
   </div>
