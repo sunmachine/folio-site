@@ -1,16 +1,16 @@
 <template>
   <div>
-    <FrontPageBackground/>
-    <div class="grid grid-cols-1 md:grid-cols-2 md:pt-20">
-      <div class="pt-20">
-        <FrontPageHeader my-name="Dan Peavey"
-                         city="Bellevue"
-                         state-postal-code="WA"
-                         twitter-url="https://twitter.com/danpeavey"
-                         linked-in-url="https://www.linkedin.com/in/danpeaveydev/"
-                         git-hub-url="https://github.com/sunmachine"/>
-      </div>
-      <div class="md:w-4/5 md:pt-20 pt-8 pl-6">
+    <FrontPageBackground />
+    <div class="grid md:grid-cols-2 grid-cols-1 h-screen">
+      <FrontPageHeader class="m-auto my-auto"
+                       my-name="Firstname Lastname"
+                       city="Some Place"
+                       state-postal-code="WA"
+                       twitter-url="https://twitter.com/danpeavey"
+                       linked-in-url="https://www.linkedin.com/in/danpeaveydev/"
+                       git-hub-url="https://github.com/sunmachine"
+                       current-job-url="https://vvspaceship.website" />
+      <div class="md:pt-8 md:w-2/3 pt-0 pl-6">
         <FrontPageContent id="news"
                           :header="newsContent.header"
                           :content="newsContent.content"/>
@@ -39,10 +39,10 @@ export default Vue.extend({
   },
   data() {
     return {
-      title: "dan peavey" as string,
+      title: "test page" as string,
       contactContent: {
         header: 'Contact',
-        content: ['danpeavey@gmail.com']
+        content: ['email@email']
       } as ISectionContent,
       newsContent: {
         header: "Under Construction",
