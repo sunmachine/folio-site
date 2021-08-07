@@ -1,5 +1,5 @@
 ﻿<template>
-  <svg class="fill-current text-s2grey"
+  <svg class="fill-current text-s2grey hover:text-white"
        viewBox="0 0 650 472"
        xml:space="preserve"
        xmlns="http://www.w3.org/2000/svg">
