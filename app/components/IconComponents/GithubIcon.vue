@@ -1,5 +1,5 @@
 ﻿<template>
-  <svg class="fill-current text-s2grey"
+  <svg class="fill-current text-s2grey hover:text-white"
        width="1792"
        height="1792"
        viewBox="0 0 1792 1792"

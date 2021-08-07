@@ -9,7 +9,7 @@
       <a :href="githubUrl"><github-icon class="w-8 h-8"/></a>
     </div>
     <a class="w-28 h-24 mt-2 mx-auto" :href="currentJobUrl">
-      <vvs-icon class="fill-current text-white"/>
+      <vvs-icon />
     </a>
   </div>
 </template>
