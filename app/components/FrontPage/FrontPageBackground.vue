@@ -1,7 +1,7 @@
 ﻿<template>
   <div>
     <!-- Gradient -->
-    <div class="w-screen h-screen bg-top fixed -z-10 bg-gradient-to-t from-gray-600 to-gray-100 mix-blend-multiply border-8 border-gray-800"/>
+    <div class="w-screen h-screen bg-top fixed -z-10 bg-gradient-to-t from-gray-600 to-gray-300 mix-blend-multiply border-8 border-gray-800"/>
     <!-- BG Image -->
     <!-- backgroundPosition -- bg-parallax -- TODO: Fix positioning by offsetting instead of repositioning. -->
     <div ref="scoped-parallax"
