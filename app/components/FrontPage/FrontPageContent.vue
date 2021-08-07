@@ -3,9 +3,14 @@
     <h2 class="text-3xl text-white">
       {{ header }}
     </h2>
-    <p v-for="lineItem in content" :key='lineItem' class="text-base text-s2grey m-2">
-      {{ lineItem }}
-    </p>
+    <div class="m-2">
+      <p v-for="lineItem in content" :key="lineItem" class="text-base text-s2grey">
+        {{ lineItem }}
+      </p>
+      <p v-if="link" class="text-base hover:text-white text-s2grey mt-2">
+        <a :href="link">{{ linkText }}</a>
+      </p>
+    </div>
   </div>
 </template>
 
@@ -23,6 +28,16 @@ export default Vue.extend({
       type: Array,
       required: true,
     },
+    link: {
+      type: String,
+      required: false,
+      default: undefined
+    },
+    linkText: {
+      type: String,
+      required: false,
+      default: ""
+    }
   },
 });
 </script>

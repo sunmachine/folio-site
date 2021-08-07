@@ -16,7 +16,9 @@
                           :content="newsContent.content"/>
         <FrontPageContent id="contact"
                           :header="contactContent.header"
-                          :content="contactContent.content"/>
+                          :content="contactContent.content"
+                          :link="contactContent.link"
+                          :link-text="contactContent.linkText"/>
       </div>
     </div>
   </div>
@@ -25,10 +27,10 @@
 <script lang="ts">
 import Vue from 'vue'
 
-import {SectionContent as ISectionContent} from "src/ComponentInterfaces";
 import FrontPageBackground from "~/components/FrontPage/FrontPageBackground.vue";
 import FrontPageHeader from "~/components/FrontPage/FrontPageHeader.vue";
 import FrontPageContent from "~/components/FrontPage/FrontPageContent.vue";
+import IFrontPageContent from "~/src/IFrontPageContent";
 
 export default Vue.extend({
   name: 'FrontPage',
@@ -41,16 +43,18 @@ export default Vue.extend({
     return {
       title: "dan peavey" as string,
       contactContent: {
-        header: 'Contact',
-        content: ['danpeavey@gmail.com']
-      } as ISectionContent,
+        header: "Contact",
+        content: ["I can be reached at my email here:"],
+        link: "mailto:danpeavey@gmail.com",
+        linkText: "danpeavey@gmail.com"
+      } as IFrontPageContent,
       newsContent: {
         header: "Under Construction",
         content: [
           "Should be worth noting that I tore down my Squarespace.",
           "Not a fan of it anymore. Updates here \"coming soon™\"."
         ]
-      } as ISectionContent,
+      } as IFrontPageContent,
     }
   },
   mounted() {
