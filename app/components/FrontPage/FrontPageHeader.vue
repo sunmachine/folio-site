@@ -5,8 +5,8 @@
     <p class="text-base text-s2grey mb-6">{{ city }}, {{ statePostalCode }}</p>
     <div class="inline-flex gap-x-2 mx-auto mb-2 text-2xl text-s2grey">
       <a :href="twitterUrl"><twitter-icon class="w-8 h-8"/></a>
-      <a :href="linkedInUrl"><linkedin-icon class="w-8 h-8"/></a>
-      <a :href="gitHubUrl"><github-icon class="w-8 h-8"/></a>
+      <a :href="linkedinUrl"><linkedin-icon class="w-8 h-8"/></a>
+      <a :href="githubUrl"><github-icon class="w-8 h-8"/></a>
     </div>
     <a class="w-28 h-24 mt-2 mx-auto" :href="currentJobUrl">
       <vvs-icon class="fill-current text-white"/>
@@ -18,7 +18,7 @@
 import Vue from 'vue'
 import TwitterIcon from "~/components/IconComponents/TwitterIcon.vue";
 import LinkedinIcon from "~/components/IconComponents/LinkedinIcon.vue";
-import GithubIcon from "~/components/IconComponents/GitHubIcon.vue";
+import GithubIcon from "~/components/IconComponents/GithubIcon.vue";
 import VvsIcon from "~/components/IconComponents/VvsIcon.vue";
 import SiteIcon from "~/components/IconComponents/SiteIcon.vue";
 
@@ -48,11 +48,11 @@ export default Vue.extend({
       type: String,
       default: "DEFAULT_TWITTER"
     },
-    linkedInUrl: {
+    linkedinUrl: {
       type: String,
       default: "DEFAULT_LINKEDIN"
     },
-    gitHubUrl: {
+    githubUrl: {
       type: String,
       default: "DEFAULT_GITHUB"
     },
