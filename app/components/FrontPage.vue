@@ -1,8 +1,8 @@
 <template>
   <div>
     <FrontPageBackground />
-    <div class="grid md:grid-cols-2 grid-cols-1 h-screen p-2">
-      <FrontPageHeader class="m-auto my-auto py-6"
+    <div class="md:flex h-screen grid grid-cols-1 p-2">
+      <FrontPageHeader class="md:flex-initial m-auto my-auto py-6"
                        my-name="Dan Peavey"
                        city="Bellevue"
                        state-postal-code="WA"
@@ -10,7 +10,7 @@
                        linkedin-url="https://www.linkedin.com/in/danpeaveydev/"
                        github-url="https://github.com/sunmachine"
                        current-job-url="https://vvspaceship.website" />
-      <div class="md:pt-8 md:w-2/3 pt-0 pl-6">
+      <div class="md:flex-initial md:w-3/5 md:pt-16 w-screen pt-4 pl-6">
         <FrontPageContent id="news"
                           :header="newsContent.header"
                           :content="newsContent.content"/>
