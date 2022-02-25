@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { defineExpose, ref } from 'vue'
+import { ref } from 'vue'
 
 const movetarget = ref(null);
 
@@ -17,14 +17,11 @@ function onMove(evt: MouseEvent) {
     element.style.backgroundPositionX = newX + "px";
     element.style.backgroundPositionY = newY + "px";
 }
-
-defineExpose({ movetarget });
-
 </script>
 
 <template>
     <div>
-        <!-- Overlayed Gradient -->
+        <!-- OverlayedGradient -->
         <div
             v-on:mousemove="onMove"
             class="w-screen h-screen bg-top fixed -z-10 bg-gradient-to-t from-gray-600 to-gray-300 mix-blend-multiply border-8 border-gray-800"
