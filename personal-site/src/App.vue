@@ -6,11 +6,8 @@ import HeaderContainer from "./components/FrontPage/HeaderContainer.vue";
 
 <template>
   <div>
-    <!-- <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
-        <polygon points="100 0, 0 100, 100 100" />
-    </svg>-->
+    <!-- TODO: I broke this parallaxing somehow. -->
     <BackgroundContainer />
-
     <div class="md:flex h-screen grid grid-cols-1 p-2">
       <div class="md:flex-initial mt-12 mx-auto py-6">
         <HeaderContainer />

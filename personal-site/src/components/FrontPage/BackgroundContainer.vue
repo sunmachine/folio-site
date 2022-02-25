@@ -17,6 +17,8 @@ function onMove(evt: MouseEvent) {
     element.style.backgroundPositionX = newX + "px";
     element.style.backgroundPositionY = newY + "px";
 }
+
+defineExpose({ movetarget });
 </script>
 
 <template>
