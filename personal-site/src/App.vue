@@ -6,7 +6,18 @@ import HeaderContainer from "./components/FrontPage/HeaderContainer.vue";
 
 <template>
   <div>
+    <!-- <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+        <polygon points="100 0, 0 100, 100 100" />
+    </svg>-->
     <BackgroundContainer />
-    <HeaderContainer />
+
+    <div class="md:flex h-screen grid grid-cols-1 p-2">
+      <div class="md:flex-initial mt-12 mx-auto py-6">
+        <HeaderContainer />
+      </div>
+      <div class="md:flex-initial md:w-3/5 md:pt-16 w-screen pt-4 pl-6">
+        <p class="text-slate-300">New site updates coming soon. I'm serious.</p>
+      </div>
+    </div>
   </div>
 </template>
