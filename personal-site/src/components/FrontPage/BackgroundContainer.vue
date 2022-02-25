@@ -24,16 +24,15 @@ defineExpose({ movetarget });
 
 <template>
     <div>
-        <!-- Gradient -->
+        <!-- Overlayed Gradient -->
         <div
             v-on:mousemove="onMove"
             class="w-screen h-screen bg-top fixed -z-10 bg-gradient-to-t from-gray-600 to-gray-300 mix-blend-multiply border-8 border-gray-800"
         />
         <!-- BG Image -->
-        <!-- backgroundPosition -- bg-parallax -- TODO: Fix positioning by offsetting instead of repositioning. -->
         <div
             ref="movetarget"
-            class="w-screen h-screen bg-cover bg-left-top bg-no-repeat bg-gray-900 bg-[url('/src/assets/background-scroller.jpg')] fixed -z-20 filter blur-sm"
+            class="w-screen h-screen bg-cover bg-left-top bg-no-repeat bg-gray-900 bg-[url('/src/assets/background-scroller.jpg')] fixed bg-blue-800 -z-20 filter blur-sm"
         />
     </div>
 </template>
