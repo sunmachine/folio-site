@@ -18,3 +18,9 @@ import HeaderContainer from "./components/FrontPage/HeaderContainer.vue";
     </div>
   </div>
 </template>
+
+<style>
+#app {
+  font-family: "Nunito", sans-serif;
+}
+</style>
