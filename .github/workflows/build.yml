@@ -5,8 +5,8 @@ name: Deploy
 # Controls when the workflow will run
 on:
   # Triggers the workflow on push or pull request events but only for the master branch
-  push:
-    branches: [ master ]
+  # push:
+  #   branches: [master]
   # pull_request:
   #   branches: []
 
@@ -29,11 +29,11 @@ jobs:
       - name: Setup node dependencies
         uses: actions/setup-node@v2
         with:
-          node-version: '12'
+          node-version: "12"
       - name: Install dependencies
-        run: npm install
+        run: pnpm install
       - name: Generate static build
-        run: npm run generate
+        run: pnpm build
       - name: Deploy build via scp
         uses: appleboy/scp-action@v0.1.1
         with:
@@ -41,7 +41,7 @@ jobs:
           key: ${{ secrets.DREAMHOST_DANPEAVEYCOM_KEY }}
           host: ${{ secrets.DREAMHOST_DANPEAVEYCOM_HOST }}
           port: ${{ secrets.DREAMHOST_DANPEAVEYCOM_PORT }}
-          source: ./app/dist/*
+          source: ./personal-site/dist/*
           target: /home/${{ secrets.DREAMHOST_DANPEAVEYCOM_USERNAME }}/danpeavey.com/public
           strip_components: 2
           rm: true
