@@ -6,8 +6,10 @@ specifiers:
   '@vitejs/plugin-vue': ^2.2.2
   autoprefixer: ^10.4.2
   eslint: ^7.32.0
+  eslint-config-prettier: ^8.4.0
   eslint-plugin-vue: ^8.5.0
   postcss: ^8.4.7
+  prettier: 2.5.1
   tailwindcss: ^3.0.23
   typescript: ^4.5.5
   vite: ^2.8.4
@@ -23,8 +25,10 @@ devDependencies:
   '@vitejs/plugin-vue': 2.2.2_vite@2.8.4+vue@3.2.31
   autoprefixer: 10.4.2_postcss@8.4.7
   eslint: 7.32.0
+  eslint-config-prettier: 8.4.0_eslint@7.32.0
   eslint-plugin-vue: 8.5.0_eslint@7.32.0
   postcss: 8.4.7
+  prettier: 2.5.1
   tailwindcss: 3.0.23_autoprefixer@10.4.2
   typescript: 4.5.5
   vite: 2.8.4
@@ -1120,6 +1124,15 @@ packages:
     engines: {node: '>=10'}
     dev: true
 
+  /eslint-config-prettier/8.4.0_eslint@7.32.0:
+    resolution: {integrity: sha512-CFotdUcMY18nGRo5KGsnNxpznzhkopOcOo0InID+sgQssPrzjvsyKZPvOgymTFeHrFuC3Tzdf2YndhXtULK9Iw==}
+    hasBin: true
+    peerDependencies:
+      eslint: '>=7.0.0'
+    dependencies:
+      eslint: 7.32.0
+    dev: true
+
   /eslint-config-standard-with-typescript/18.0.2_990a95134969396deb0845ab252387ea:
     resolution: {integrity: sha512-6D++u/gifJgj2hQ13e+YRyNs+1v3oihkfsL36P6HjeQjiOBdhRC/0wq3PRqfOwFA0hMCkcWBvhfO0GXWtGW9bg==}
     peerDependencies:
@@ -2089,6 +2102,12 @@ packages:
   /prelude-ls/1.2.1:
     resolution: {integrity: sha512-vkcDPrRZo1QZLbn5RLGPpg/WmIQ65qoWWhcGKf/b5eplkkarX0m9z8ppCat4mlOqUsWpyNuYgO3VRyrYHSzX5g==}
     engines: {node: '>= 0.8.0'}
+    dev: true
+
+  /prettier/2.5.1:
+    resolution: {integrity: sha512-vBZcPRUR5MZJwoyi3ZoyQlc1rXeEck8KgeC9AwwOn+exuxLxq5toTRDTSaVrXHxelDMHy9zlicw8u66yxoSUFg==}
+    engines: {node: '>=10.13.0'}
+    hasBin: true
     dev: true
 
   /progress/2.0.3:
