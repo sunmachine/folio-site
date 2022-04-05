@@ -7,7 +7,7 @@ import FixedBackgroundContainer from "./components/FrontPage/FixedBackgroundCont
   <div>
     <!-- Left-side -->
     <div
-      class="left-0 w-2/5 h-screen bg-top fixed bg-slate-700 border-l-8 border-t-8 border-b-8 border-gray-800"
+      class="left-0 w-2/5 h-screen bg-top fixed bg-slate-800 border-l-8 border-t-8 border-b-8 border-slate-900"
     >
       <div class="md:flex h-screen grid grid-cols-1">
         <div class="md:flex-initial mt-12 mx-auto py-6">
@@ -18,7 +18,7 @@ import FixedBackgroundContainer from "./components/FrontPage/FixedBackgroundCont
 
     <!-- Right-side -->
     <div
-      class="right-0 p-2/5 w-3/5 h-screen absolute border-r-8 border-t-8 border-b-8 border-slate-800 bg-clear"
+      class="right-0 p-2/5 w-3/5 h-screen absolute border-r-8 border-t-8 border-b-8 border-slate-900 bg-clear"
     >
       <FixedBackgroundContainer />
       <!-- <div class="md:flex-initial w-max md:w-3/5 md:pt-16 pt-4 pl-6"> -->

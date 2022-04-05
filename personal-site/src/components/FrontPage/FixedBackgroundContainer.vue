@@ -2,9 +2,9 @@
 
 <template>
   <div>
-    <!-- OverlayedGradient -->
+    <!-- OverlayGradient -->
     <div
-      class="w-full h-full -z-10 absolute bg-gradient-to-r from-slate-700 via-transparent to-transparent"
+      class="w-full h-full -z-10 absolute bg-gradient-to-r from-slate-800 via-transparent to-transparent"
     />
     <!-- BG Image -->
     <div
