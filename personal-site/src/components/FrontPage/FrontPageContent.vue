@@ -1,4 +1,4 @@
-﻿<template>
+﻿<!-- <template>
   <div class="m-6">
     <h2 class="text-3xl text-white">
       {{ header }}
@@ -40,4 +40,4 @@ export default Vue.extend({
     }
   },
 });
-</script>
+</script> -->

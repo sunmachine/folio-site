@@ -1,4 +1,4 @@
-﻿<template>
+﻿<!-- <template>
   <div class="mx-auto text-center grid grid-cols-1">
     <site-icon class="text-white mx-auto w-20 h-20 mb-4"/>
     <h2 class="text-white text-3xl">{{ myName }}</h2>
@@ -62,4 +62,4 @@ export default Vue.extend({
     }
   }
 })
-</script>
+</script> -->

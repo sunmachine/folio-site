@@ -3,7 +3,6 @@ import SiteIcon from "../Icons/SiteIcon.vue";
 import TwitterIcon from "../Icons/TwitterIcon.vue";
 import LinkedinIcon from "../Icons/LinkedinIcon.vue";
 import GithubIcon from "../Icons/GithubIcon.vue";
-
 </script>
 
 <template>

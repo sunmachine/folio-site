@@ -1,4 +1,4 @@
-<template>
+<!-- <template>
   <div>
     <FrontPageBackground />
     <div class="md:flex h-screen grid grid-cols-1 p-2">
@@ -66,4 +66,4 @@ export default Vue.extend({
     }
   },
 })
-</script>
+</script> -->
