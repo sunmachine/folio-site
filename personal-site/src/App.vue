@@ -1,6 +1,8 @@
 <script setup lang="ts">
 import HeaderContainer from "./components/FrontPage/HeaderContainer.vue";
 import FixedBackgroundContainer from "./components/FrontPage/FixedBackgroundContainer.vue";
+
+document.title = "dan peavey";
 </script>
 
 <template>
