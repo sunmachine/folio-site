@@ -1,0 +1,20 @@
+{
+  "env": {
+    "node": true
+  },
+  "parser": "@typescript-eslint/parser",
+  "extends": [
+    "eslint:recommended",
+    "plugin:@typescript-eslint/recommended",
+    "plugin:@typescript-eslint/recommended-requiring-type-checking",
+    "plugin:vue/vue3-recommended",
+    "prettier"
+  ],
+  "rules": {
+    "vue/no-unused-vars": "error",
+    "quotes": [
+      "error",
+      "double"
+    ]
+  }
+}
