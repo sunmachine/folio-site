@@ -1,8 +1,5 @@
 module.exports = {
-  content: [
-    "./index.html",
-    "./src/**/*.{vue,js,ts,jsx,tsx}"
-  ],
+  content: ["./index.html", "./src/**/*.{vue,js,ts,jsx,tsx}"],
   theme: {
     extend: {
       zIndex: {
@@ -15,8 +12,8 @@ module.exports = {
         "-70": "-70",
         "-80": "-80",
         "-90": "-90",
-      }
+      },
     },
   },
   plugins: [],
-}
+};
