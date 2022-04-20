@@ -6,6 +6,7 @@ document.title = "dan peavey";
 </script>
 
 <template>
+  <link rel="icon" href="favicon.svg" />
   <div>
     <!-- Left-side -->
     <div
