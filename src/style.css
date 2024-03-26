@@ -1,1 +1,24 @@
 @import url("https://fonts.googleapis.com/css2?family=Nunito:wght@200&display=swap");
+@import url("styles/colors.css");
+@import url("styles/buttons.css");
+@import url("styles/logo.css");
+@import url("styles/nav.css");
+
+html {
+  background-color: var(--c-seaplane-grey);
+}
+
+.logo-container {
+  color: var(--c-tunisian-stone);
+  user-select: none;
+}
+
+.logo-image {
+  background-color: var(--c-tunisian-stone);
+}
+
+#classdojo {
+  width: 4rem;
+  height: 4rem;
+  filter: drop-shadow(0 0 5px var(--c-blue-heaven));
+}
