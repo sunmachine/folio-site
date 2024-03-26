@@ -32,3 +32,17 @@
   font-size: 1.2rem;
   letter-spacing: 0.42em;
 }
+
+.horizontal-line {
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 11.9rem; /* Adjust to place the line at the desired vertical position */
+  height: 0.2rem; /* Thickness of the line */
+  background-image: linear-gradient(
+    to right,
+    var(--c-tunisian-stone) -100rem,
+    transparent
+  );
+  z-index: 1; /* Ensure it's above other content, may need adjustment */
+}
