@@ -1,5 +1,3 @@
-# folio-site
+# My Portfolio Site
 
-Source for danpeavey.com
-
-See app/Readme for project-specific configuration setup.
+It's a work in progress while I bash my face against CSS.
