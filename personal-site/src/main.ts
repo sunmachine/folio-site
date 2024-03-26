@@ -1,5 +1,4 @@
-import { createApp } from "vue";
-import App from "./App.vue";
-import "./index.css";
+import "./style.css";
+import main from "./pages/main.html";
 
-createApp(App).mount("#app");
+document.querySelector<HTMLDivElement>("#app")!.innerHTML = main;
