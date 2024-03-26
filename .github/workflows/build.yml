@@ -45,4 +45,4 @@ jobs:
           REMOTE_HOST: ${{ secrets.DREAMHOST_DANPEAVEYCOM_HOST }}
           REMOTE_PORT: ${{ secrets.DREAMHOST_DANPEAVEYCOM_PORT }}
           SOURCE: ./dist/*
-          TARGET: /home/${{ secrets.DREAMHOST_DANPEAVEYCOM_USERNAME }}/danpeavey.com/public
+          TARGET: /home/${{ secrets.DREAMHOST_DANPEAVEYCOM_USERNAME }}/danpeavey.com
