@@ -1,6 +1,6 @@
 # This is a basic workflow to help you get started with Actions
 
-name: Deploy
+name: 🚀 Deploy
 
 # Controls when the workflow will run
 on:
@@ -15,33 +15,34 @@ on:
 
 defaults:
   run:
-    working-directory: ./app
+    working-directory: ./
 
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
   build:
-    runs-on: ubuntu-18.04
+    runs-on: ubuntu-latest
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - name: Checkout git project
-        uses: actions/checkout@v2
+        uses: actions/checkout@v4
       - name: Setup node dependencies
-        uses: actions/setup-node@v2
+        uses: actions/setup-node@v4
         with:
-          node-version: "12"
+          node-version: "20"
+      - uses: pnpm/action-setup@v3
+        with:
+          version: 8
       - name: Install dependencies
         run: pnpm install
       - name: Generate static build
         run: pnpm build
       - name: Deploy build via scp
-        uses: appleboy/scp-action@v0.1.1
+        uses: easingthemes/ssh-deploy@v5.0.3
         with:
-          username: ${{ secrets.DREAMHOST_DANPEAVEYCOM_USERNAME }}
-          key: ${{ secrets.DREAMHOST_DANPEAVEYCOM_KEY }}
-          host: ${{ secrets.DREAMHOST_DANPEAVEYCOM_HOST }}
-          port: ${{ secrets.DREAMHOST_DANPEAVEYCOM_PORT }}
-          source: ./dist/*
-          target: /home/${{ secrets.DREAMHOST_DANPEAVEYCOM_USERNAME }}/danpeavey.com/public
-          strip_components: 2
-          rm: true
+          REMOTE_USER: ${{ secrets.DREAMHOST_DANPEAVEYCOM_USERNAME }}
+          SSH_PRIVATE_KEY: ${{ secrets.DREAMHOST_DANPEAVEYCOM_KEY }}
+          REMOTE_HOST: ${{ secrets.DREAMHOST_DANPEAVEYCOM_HOST }}
+          REMOTE_PORT: ${{ secrets.DREAMHOST_DANPEAVEYCOM_PORT }}
+          SOURCE: ./dist/*
+          TARGET: /home/${{ secrets.DREAMHOST_DANPEAVEYCOM_USERNAME }}/danpeavey.com/public
