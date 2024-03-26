@@ -41,7 +41,7 @@ jobs:
           key: ${{ secrets.DREAMHOST_DANPEAVEYCOM_KEY }}
           host: ${{ secrets.DREAMHOST_DANPEAVEYCOM_HOST }}
           port: ${{ secrets.DREAMHOST_DANPEAVEYCOM_PORT }}
-          source: ./personal-site/dist/*
+          source: ./dist/*
           target: /home/${{ secrets.DREAMHOST_DANPEAVEYCOM_USERNAME }}/danpeavey.com/public
           strip_components: 2
           rm: true
