@@ -42,7 +42,7 @@ jobs:
         with:
           switches: -Pavzr --delete
           path: dist/*
-          remote_path: /home/${{ secrets.DREAMHOST_DANPEAVEYCOM_USERNAME }}/danpeavey.com
+          remote_path: /home/${{ secrets.DREAMHOST_DANPEAVEYCOM_USERNAME }}/danpeavey.com/public
           remote_host: ${{ secrets.DREAMHOST_DANPEAVEYCOM_HOST }}
           remote_user: ${{ secrets.DREAMHOST_DANPEAVEYCOM_USERNAME }}
           remote_port: ${{ secrets.DREAMHOST_DANPEAVEYCOM_PORT }}
