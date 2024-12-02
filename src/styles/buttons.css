@@ -41,3 +41,13 @@
   -webkit-mask-image: var(--linkedin-icon);
   -webkit-mask-size: cover;
 }
+
+.icon-bsky {
+  background-color: var(--c-masala);
+
+  --bsky-icon: url("/bluesky-1.svg");
+  mask-image: var(--bsky-icon);
+  mask-size: cover;
+  -webkit-mask-image: var(--bsky-icon);
+  -webkit-mask-size: cover;
+}
